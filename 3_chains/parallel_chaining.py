@@ -58,9 +58,6 @@ chain = (
     | RunnableLambda(lambda x: combine_verdicts(x["branches"]["plot"],x["branches"]["character"]))
 )
 
-
-
-
 result = chain.invoke({"movie_name":"inception"})
 
 print(result)

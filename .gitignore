@@ -2,3 +2,5 @@
 .env
 db
 .venv
+chroma_db
+chroma_db_metadata

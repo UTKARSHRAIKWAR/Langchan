@@ -7,6 +7,7 @@ import os
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
 from dotenv import load_dotenv
 
@@ -44,7 +45,7 @@ if not os.path.exists(persistent_directory):
 
     #creating embeddings
     print("\n--- Creating embeddings ---")
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     print("\n--- Finished embedding")
 
     #create vector store and persist it automation
